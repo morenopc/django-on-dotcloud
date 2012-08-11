@@ -3,4 +3,5 @@ python createdb.py
 python hellodjango/manage.py syncdb --noinput
 python mkadmin.py
 mkdir -p /home/dotcloud/data/media /home/dotcloud/volatile/static
+ln -sf /home/dotcloud/volatile/static /home/dotcloud/static
 python hellodjango/manage.py collectstatic --noinput
