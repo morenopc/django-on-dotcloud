@@ -1,7 +1,9 @@
-import MySQLdb
-import psycopg2
 import os
 import time
+
+import MySQLdb
+import psycopg2
+import _mysql_exceptions
 from wsgi import *
 
 def create_dbs():
@@ -54,9 +56,14 @@ def create_dbs():
                     exit(0)
                 else:
                     print("ERROR: {0} is not supported by this script, you will need to create your database by hand.".format(db_type))
+                    exit(1)
         except psycopg2.OperationalError:
             print "Could not connect to database. Waiting a little bit."
             time.sleep(10)
+        except _mysql_exceptions.OperationalError:
+            print "Could not connect to database. Waiting a little bit."
+            time.sleep(10)
+
 
     print 'Could not connect to database after 10 minutes. Something is wrong.'
     exit(1)
