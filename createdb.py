@@ -7,7 +7,7 @@ import _mysql_exceptions
 from wsgi import *
 
 def create_dbs():
-    deadline = time.time() + 600
+    deadline = time.time() + 60
     while time.time() < deadline:
         try:
             print("create_dbs: let's go.")
