@@ -65,7 +65,7 @@ def create_dbs():
             time.sleep(10)
 
 
-    print 'Could not connect to database after 10 minutes. Something is wrong.'
+    print 'Could not connect to database after 1 minutes. Something is wrong.'
     exit(1)
 
 if __name__ == '__main__':
