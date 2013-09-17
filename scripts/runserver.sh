@@ -1,1 +1,1 @@
-./env/bin/python {{ project_name }}/manage.py runserver
+./env/bin/python hellodjango2scoops/manage.py runserver

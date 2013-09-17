@@ -6,7 +6,7 @@ ADMIN_PASSWORD='ad2&min3'
 ADMIN_EMAIL='your_email@example.com'
 SITENAME="localhost:8000"
 PYTHON="env/bin/python"
-PROJECT="{{ project_name }}"
+PROJECT="hellodjango2scoops"
 set -x
 # virtualenv
 if [ ! -d env ]; then
@@ -15,7 +15,7 @@ fi
 # requirements.txt
 env/bin/pip install -r requirements/local.txt
 # DB(sqlite)
-rm -f dev.db
+rm -f default.db
 # syncdb and South --migrate
 $PYTHON $PROJECT/manage.py syncdb --migrate --noinput
 # admin account

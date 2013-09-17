@@ -1,1 +1,1 @@
-./env/bin/python {{ project_name }}/manage.py shell_plus
+./env/bin/python hellodjango2scoops/manage.py shell_plus
