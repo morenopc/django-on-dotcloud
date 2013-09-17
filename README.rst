@@ -1,19 +1,19 @@
-Django on DotCloud
-==================
+Two Scoops of Django on DotCloud
+================================
 
-This code shows how to run a very simple Django application on DotCloud.
+This code shows how to run a two scoops of Django book application on DotCloud.
 It is fully functional, in the sense that you don't have any hand-editing
 to do to deploy it: it automatically deploys a PostgreSQL database,
-includes it in ``settings.py``, creates a superuser for you, and uses
-Django 1.3 ``collectstatic``. *Batteries Included!*
+includes it in ``hellodjango2scoops.settings.production.py``, creates a superuser for you, and uses
+Django 1.5.3 ``collectstatic``. *Batteries Included!* (also Redis cache backend 3.3)
 
 To run this code on DotCloud, you need a `DotCloud account
 <https://www.dotcloud.com/accounts/register/>`_ (free tier available).
 Then clone this repository, and push it to DotCloud::
 
-  $ git clone git://github.com/dotcloud/django-on-dotcloud.git
-  $ cd django
-  $ dotcloud push hellodjango
+  $ git clone https://github.com/morenopc/django-on-dotcloud.git
+  $ cd django-on-dotcloud
+  $ dotcloud push hellodjango2scoops
 
 Happy hacking! Remember: each time you modify something, you need to
 git add + git commit your changes before doing ``dotcloud push``.
@@ -25,7 +25,7 @@ You can view the whole tutorial, and the modified files at each step,
 with at least three different methods:
 
 * by using GitHub's awesome `compare view
-  <https://github.com/dotcloud/django-on-dotcloud/compare/start...finish>`_:
+  <https://github.com/morenopc/django-on-dotcloud/compare/start...finish>`_:
   you will see the list of commits involved in the tutorial, and by
   clicking on each individual commit, you will see the file modifications
   for this step;
@@ -39,4 +39,3 @@ with at least three different methods:
 You can also learn more by diving into `DotCloud documentations
 <http://docs.dotcloud.com/>`_, especially the one for the `Python service
 <http://docs.dotcloud.com/services/python/>`_ which is used by this app.
-
