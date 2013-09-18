@@ -13,6 +13,9 @@ Then clone this repository, and push it to DotCloud::
 
   $ git clone https://github.com/morenopc/django-on-dotcloud.git
   $ cd django-on-dotcloud
+  $ dotcloud check
+  $ dotcloud connect hellodjango2scoops
+  $ dotcloud env set 'SECRET_KEY=7@q^6^_^9ys+2+hr@udpy^0^gd!xrn#^dlp!5#$39xnq#t10.0'
   $ dotcloud push hellodjango2scoops
 
 Happy hacking! Remember: each time you modify something, you need to
